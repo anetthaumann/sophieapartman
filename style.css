@@ -474,3 +474,13 @@ p{
     max-width: 290px;
   }
 }
+
+/* =========================
+   CÍM STÍLUS
+========================= */
+
+.section-kicker-title{
+  color: var(--red);
+  letter-spacing: 1.1px;
+  font-weight: 700;
+}
