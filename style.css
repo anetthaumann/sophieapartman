@@ -86,11 +86,6 @@ p{
   padding: 54px 0;
 }
 
-.small-section{
-  padding-top: 8px;
-  padding-bottom: 28px;
-}
-
 /* =========================
    FEJLÉC
 ========================= */
@@ -208,7 +203,7 @@ p{
 }
 
 /* =========================
-   FELSŐ KÉP + SZÖVEG
+   KÉP + SZÖVEG
 ========================= */
 
 .intro-grid{
@@ -251,13 +246,15 @@ p{
 }
 
 /* =========================
-   KIEMELT 3 KÁRTYA
+   SOPHIE BLOKKON BELÜLI
+   3 KIEMELT KÁRTYA
 ========================= */
 
-.highlight-center{
+.intro-pillars{
   display: grid;
   justify-items: center;
   gap: 14px;
+  margin-top: 22px;
 }
 
 .pill{
@@ -285,68 +282,78 @@ p{
 }
 
 /* =========================
-   MIÉRT KÜLÖNLEGES
+   EGYSÉGES 3 KÁRTYÁS RÉSZEK
 ========================= */
 
-.feature-grid{
+.unified-card-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
-.feature-card{
+.unified-card{
   background: var(--white);
-  padding: 26px 22px;
+  padding: 28px 22px 24px;
   border-radius: 18px;
-  border: 2px solid transparent;
   text-align: center;
   box-shadow: var(--shadow);
-  transition: 0.2s ease;
+  border: 2px solid transparent;
+  position: relative;
+  transition: 0.22s ease;
 }
 
-.feature-card:hover{
-  border-color: var(--red);
+.unified-card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 18px 18px 0 0;
+}
+
+.unified-card--red::before{
+  background: var(--red);
+}
+
+.unified-card--yellow::before{
+  background: var(--yellow);
+}
+
+.unified-card:hover{
   transform: translateY(-4px);
 }
 
-.feature-card h3{
+.unified-card--red:hover{
+  border-color: var(--red);
+  box-shadow:
+    0 22px 48px rgba(18, 54, 87, 0.12),
+    0 0 0 1px rgba(199,58,50,0.18);
+}
+
+.unified-card--yellow:hover{
+  border-color: var(--yellow);
+  box-shadow:
+    0 22px 48px rgba(18, 54, 87, 0.12),
+    0 0 0 1px rgba(230,177,31,0.22);
+}
+
+.unified-card h3{
   color: var(--blue-dark);
-}
-
-/* =========================
-   TORREVIEJA RÉSZ
-========================= */
-
-.torrevieja-box{
-  background: rgba(255,255,255,0.94);
-  border-radius: 26px;
-  padding: 34px 28px;
-  box-shadow: var(--shadow-strong);
-  border: 1px solid rgba(30, 91, 140, 0.10);
-}
-
-.torrevieja-box h2{
-  color: var(--blue-dark);
-  margin-bottom: 26px;
-}
-
-.torrevieja-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.torrevieja-grid > div{
-  background: rgba(255,255,255,0.92);
-  padding: 24px 20px;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  border-top: 4px solid var(--yellow);
-}
-
-.torrevieja-grid h3{
-  color: var(--blue-dark);
+  margin-top: 8px;
   margin-bottom: 10px;
+}
+
+.unified-card__icon{
+  width: 62px;
+  height: 62px;
+  margin: 4px auto 16px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  background: linear-gradient(145deg, rgba(199,58,50,0.10), rgba(230,177,31,0.18));
+  box-shadow: var(--shadow);
 }
 
 /* =========================
@@ -398,8 +405,7 @@ p{
     height: 420px;
   }
 
-  .feature-grid,
-  .torrevieja-grid{
+  .unified-card-grid{
     grid-template-columns: 1fr;
   }
 }
@@ -462,9 +468,5 @@ p{
 
   .pill{
     max-width: 290px;
-  }
-
-  .torrevieja-box{
-    padding: 24px 18px;
   }
 }
