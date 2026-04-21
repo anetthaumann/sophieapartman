@@ -155,9 +155,13 @@ p{
   transition: 0.2s ease;
 }
 
+.nav a{
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
 .nav a:hover{
-  background: rgba(30, 91, 140, 0.10);
-  color: var(--red);
+  background: var(--red);
+  color: var(--yellow);
 }
 
 .menu-toggle{
