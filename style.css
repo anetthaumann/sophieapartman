@@ -69,20 +69,7 @@ p{
   margin: 0 0 16px;
 }
 
-.section{
-  padding: 54px 0;
-}
-
-.section--compact{
-  padding-top: 10px;
-  padding-bottom: 26px;
-}
-
-.section-heading{
-  margin-bottom: 28px;
-}
-
-.section-heading--center{
+.center{
   text-align: center;
 }
 
@@ -93,6 +80,15 @@ p{
   letter-spacing: 1.1px;
   font-size: 13px;
   font-weight: 700;
+}
+
+.section{
+  padding: 54px 0;
+}
+
+.small-section{
+  padding-top: 8px;
+  padding-bottom: 28px;
 }
 
 /* =========================
@@ -190,23 +186,24 @@ p{
 }
 
 /* =========================
-   KIEMELT FELSŐ SOR
+   MENÜ ALATTI SÁV
 ========================= */
 
-.top-strip{
-  padding: 26px 0 10px;
+.service-strip{
+  padding: 24px 0 10px;
+  text-align: center;
 }
 
-.top-strip p{
+.service-strip p{
+  display: inline-block;
   margin: 0;
-  text-align: center;
+  padding: 12px 22px;
+  border-radius: 16px;
   font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: 700;
-  color: var(--blue-dark);
-  padding: 12px 20px;
-  border-radius: 18px;
-  background: linear-gradient(90deg, rgba(199,58,50,0.10), rgba(230,177,31,0.18), rgba(199,58,50,0.10));
+  color: var(--white);
+  background: linear-gradient(90deg, var(--red), var(--yellow), var(--red));
   box-shadow: var(--shadow);
 }
 
@@ -214,54 +211,56 @@ p{
    FELSŐ KÉP + SZÖVEG
 ========================= */
 
-.intro-layout{
+.intro-grid{
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 34px;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 32px;
   align-items: center;
 }
 
-.intro-photo{
+.intro-image img{
   width: 100%;
   height: 620px;
   object-fit: cover;
   object-position: center;
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: var(--shadow-strong);
 }
 
-.intro-layout__text{
-  background: rgba(255,255,255,0.86);
+.intro-text{
+  background: rgba(255,255,255,0.92);
   border: 1px solid rgba(30, 91, 140, 0.10);
-  border-radius: 28px;
+  border-radius: 24px;
   padding: 34px 30px;
   box-shadow: var(--shadow);
 }
 
-.intro-layout__text h1{
+.intro-text h1{
   color: var(--blue-dark);
+  margin-bottom: 18px;
 }
 
-.intro-layout__text h2{
-  margin-top: 20px;
+.intro-text h2{
   color: var(--red);
+  margin-top: 20px;
+  font-size: 28px;
 }
 
-.intro-layout__text p{
+.intro-text p{
   color: var(--text);
 }
 
 /* =========================
-   3 KIEMELT SOR
+   KIEMELT 3 KÁRTYA
 ========================= */
 
-.highlight-pillars{
+.highlight-center{
   display: grid;
   justify-items: center;
   gap: 14px;
 }
 
-.highlight-pill{
+.pill{
   width: 100%;
   max-width: 340px;
   min-height: 58px;
@@ -269,18 +268,18 @@ p{
   align-items: center;
   justify-content: center;
   padding: 12px 18px;
-  border-radius: 16px;
+  border-radius: 14px;
   font-weight: 700;
   text-align: center;
   box-shadow: var(--shadow);
 }
 
-.highlight-pill--red{
+.pill.red{
   background: var(--red);
   color: var(--white);
 }
 
-.highlight-pill--yellow{
+.pill.yellow{
   background: var(--yellow);
   color: #4c3900;
 }
@@ -297,48 +296,38 @@ p{
 
 .feature-card{
   background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 28px 24px;
-  box-shadow: var(--shadow);
+  padding: 26px 22px;
+  border-radius: 18px;
+  border: 2px solid transparent;
   text-align: center;
-  transition: 0.25s ease;
+  box-shadow: var(--shadow);
+  transition: 0.2s ease;
 }
 
 .feature-card:hover{
+  border-color: var(--red);
   transform: translateY(-4px);
-  border-color: rgba(199,58,50,0.35);
-  box-shadow:
-    0 24px 54px rgba(18, 54, 87, 0.14),
-    0 0 0 1px rgba(199,58,50,0.16);
 }
 
-.feature-icon{
-  width: 62px;
-  height: 62px;
-  margin: 0 auto 16px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  font-size: 28px;
-  background: linear-gradient(145deg, rgba(199,58,50,0.10), rgba(230,177,31,0.18));
-  box-shadow: var(--shadow);
+.feature-card h3{
+  color: var(--blue-dark);
 }
 
 /* =========================
    TORREVIEJA RÉSZ
 ========================= */
 
-.torrevieja-section{
-  padding-top: 30px;
+.torrevieja-box{
+  background: rgba(255,255,255,0.94);
+  border-radius: 26px;
+  padding: 34px 28px;
+  box-shadow: var(--shadow-strong);
+  border: 1px solid rgba(30, 91, 140, 0.10);
 }
 
-.torrevieja-box{
-  background: linear-gradient(145deg, rgba(255,255,255,0.92), rgba(255,248,238,0.92));
-  border: 1px solid rgba(30, 91, 140, 0.10);
-  border-radius: 30px;
-  padding: 38px 32px;
-  box-shadow: var(--shadow-strong);
+.torrevieja-box h2{
+  color: var(--blue-dark);
+  margin-bottom: 26px;
 }
 
 .torrevieja-grid{
@@ -347,16 +336,17 @@ p{
   gap: 22px;
 }
 
-.torrevieja-item{
-  background: rgba(255,255,255,0.82);
-  border-radius: 22px;
-  padding: 24px 22px;
+.torrevieja-grid > div{
+  background: rgba(255,255,255,0.92);
+  padding: 24px 20px;
+  border-radius: 18px;
   box-shadow: var(--shadow);
   border-top: 4px solid var(--yellow);
 }
 
-.torrevieja-item h3{
+.torrevieja-grid h3{
   color: var(--blue-dark);
+  margin-bottom: 10px;
 }
 
 /* =========================
@@ -364,22 +354,24 @@ p{
 ========================= */
 
 .footer{
-  padding: 24px 0 32px;
   background: #15304d;
   color: rgba(255,255,255,0.88);
+  padding: 24px 0 32px;
 }
 
 .footer__row{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .footer__row p{
   margin: 0;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer a{
@@ -394,10 +386,43 @@ p{
 }
 
 /* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px){
+  .intro-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image img{
+    height: 420px;
+  }
+
+  .feature-grid,
+  .torrevieja-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
    MOBIL
 ========================= */
 
 @media (max-width: 768px){
+  h1{
+    font-size: 36px;
+  }
+
+  h2{
+    font-size: 28px;
+  }
+
+  .header__row{
+    min-height: 72px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+  }
+
   .menu-toggle{
     display: inline-block;
     margin-left: auto;
@@ -420,5 +445,26 @@ p{
     background: rgba(30, 91, 140, 0.08);
     text-align: center;
     border-radius: 12px;
+  }
+
+  .service-strip p{
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+
+  .intro-image img{
+    height: 300px;
+  }
+
+  .intro-text{
+    padding: 24px 18px;
+  }
+
+  .pill{
+    max-width: 290px;
+  }
+
+  .torrevieja-box{
+    padding: 24px 18px;
   }
 }
