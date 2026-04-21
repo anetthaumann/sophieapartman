@@ -486,40 +486,49 @@ p{
 }
 
 /* =========================
-   HULLÁMOS CÍM
+   ANIMÁLT HULLÁMOS CÍM
 ========================= */
 
+.section-kicker-title{
+  color: var(--red);
+  letter-spacing: 1.1px;
+  font-weight: 700;
+}
+
 .wave-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
   text-align: center;
-  position: relative;
 }
 
-.wave-title span{
-  position: relative;
+.wave-text{
   display: inline-block;
-  padding: 0 16px;
 }
 
-/* BAL OLDALI HULLÁM */
-.wave-title span::before{
-  content: "≈≈≈";
-  position: absolute;
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--blue);
-  font-size: 20px;
-  opacity: 0.7;
+.wave-line{
+  position: relative;
+  width: 70px;
+  height: 12px;
+  flex: 0 0 70px;
 }
 
-/* JOBB OLDALI HULLÁM */
-.wave-title span::after{
-  content: "≈≈≈";
+.wave-line::before{
+  content: "";
   position: absolute;
-  right: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--blue);
-  font-size: 20px;
-  opacity: 0.7;
+  inset: 0;
+  background:
+    radial-gradient(circle at 6px 6px, var(--blue) 2px, transparent 2.5px) 0 0 / 18px 12px repeat-x;
+  opacity: 0.75;
+  animation: waveMove 2.2s linear infinite;
+}
+
+@keyframes waveMove{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(18px);
+  }
 }
