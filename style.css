@@ -537,3 +537,22 @@ p{
     transform: translateY(-50%) translateX(-18px);
   }
 }
+
+.intro-lead{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+}
+
+.intro-link{
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--red);
+  text-decoration: none;
+}
+
+.intro-link:hover{
+  text-decoration: underline;
+}
