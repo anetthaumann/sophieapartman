@@ -509,26 +509,31 @@ p{
 
 .wave-line{
   position: relative;
-  width: 70px;
-  height: 12px;
-  flex: 0 0 70px;
+  width: 80px;
+  height: 14px;
+  flex: 0 0 80px;
+  overflow: hidden;
 }
 
 .wave-line::before{
-  content: "";
+  content: "~~~~~~~";
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 6px 6px, var(--blue) 2px, transparent 2.5px) 0 0 / 18px 12px repeat-x;
-  opacity: 0.75;
-  animation: waveMove 2.2s linear infinite;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blue);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  animation: waveMove 2s linear infinite;
 }
 
 @keyframes waveMove{
   from{
-    transform: translateX(0);
+    transform: translateY(-50%) translateX(0);
   }
   to{
-    transform: translateX(18px);
+    transform: translateY(-50%) translateX(-18px);
   }
 }
