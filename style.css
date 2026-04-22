@@ -565,8 +565,10 @@ p{
   margin-bottom: 24px;
 }
 
+
 .intro-text{
   position: relative;
+  overflow: hidden; /* EZ A LÉNYEG */
 }
 
 .intro-text::before{
@@ -574,8 +576,7 @@ p{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;          /* pontosabb mint width:100% */
   height: 6px;
   background: var(--red);
-  border-radius: 24px 24px 0 0;
 }
