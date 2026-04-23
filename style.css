@@ -1421,3 +1421,20 @@ p{
   color: var(--blue-dark);
   margin-bottom: 14px;
 }
+
+.card-link{
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.card-link:hover{
+  background: var(--blue-dark);
+}
