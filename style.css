@@ -1499,3 +1499,10 @@ p{
     padding: 20px 16px;
   }
 }
+
+
+.nav a.active{
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 6px 16px rgba(30, 91, 140, 0.25);
+}
