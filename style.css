@@ -304,6 +304,7 @@ p{
   border: 2px solid transparent;
   position: relative;
   transition: 0.22s ease;
+  overflow: hidden;
 }
 
 .unified-card::before{
@@ -311,9 +312,8 @@ p{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;     /* EZ FONTOS */
   height: 6px;
-  border-radius: 18px 18px 0 0;
 }
 
 .unified-card--red::before{
