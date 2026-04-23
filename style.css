@@ -424,49 +424,6 @@ p{
    ANIMÁLT HULLÁMOS CÍM
 ========================= */
 
-.wave-title{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  text-align: center;
-}
-
-.wave-text{
-  display: inline-block;
-  color: var(--blue-dark);
-}
-
-.wave-line{
-  position: relative;
-  width: 80px;
-  height: 14px;
-  flex: 0 0 80px;
-  overflow: hidden;
-}
-
-.wave-line::before{
-  content: "~~~~~~~";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--blue);
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -2px;
-  white-space: nowrap;
-  animation: waveMove 2s linear infinite;
-}
-
-@keyframes waveMove{
-  from{
-    transform: translateY(-50%) translateX(0);
-  }
-  to{
-    transform: translateY(-50%) translateX(-18px);
-  }
-}
 
 .torrevieja-subtitle{
   text-align: center;
