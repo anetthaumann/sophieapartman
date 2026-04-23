@@ -152,10 +152,6 @@ p{
   font-weight: 600;
   padding: 10px 12px;
   border-radius: 12px;
-  transition: 0.2s ease;
-}
-
-.nav a{
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -212,17 +208,22 @@ p{
 
 .intro-grid{
   display: grid;
-  grid-template-columns: 0.92fr 1.08fr;
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
-  align-items: center;
+  align-items: stretch;
+}
+
+.intro-image{
+  display: flex;
 }
 
 .intro-image img{
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 24px;
   box-shadow: var(--shadow-strong);
+  background: var(--white);
 }
 
 .intro-text{
@@ -231,6 +232,28 @@ p{
   border-radius: 24px;
   padding: 34px 30px;
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.intro-text::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--red);
+}
+
+.intro-text:hover{
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow:
+    0 24px 54px rgba(18, 40, 92, 0.16),
+    0 0 24px rgba(45, 79, 255, 0.28);
 }
 
 .intro-text h1{
@@ -239,13 +262,32 @@ p{
 }
 
 .intro-text h2{
-  color: var(--red);
+  color: var(--blue-dark);
   margin-top: 20px;
   font-size: 28px;
 }
 
 .intro-text p{
   color: var(--text);
+}
+
+.intro-lead{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+}
+
+.intro-link{
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+.intro-link:hover{
+  text-decoration: underline;
 }
 
 /* =========================
@@ -311,7 +353,7 @@ p{
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;     /* EZ FONTOS */
+  right: 0;
   height: 6px;
 }
 
@@ -360,6 +402,72 @@ p{
 }
 
 /* =========================
+   CÍM STÍLUS (EGYSÉGES, KÉK)
+========================= */
+
+.section-kicker-title{
+  color: var(--blue-dark);
+  letter-spacing: 1.1px;
+  font-weight: 700;
+}
+
+/* =========================
+   ANIMÁLT HULLÁMOS CÍM
+========================= */
+
+.wave-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.wave-text{
+  display: inline-block;
+  color: var(--blue-dark);
+}
+
+.wave-line{
+  position: relative;
+  width: 80px;
+  height: 14px;
+  flex: 0 0 80px;
+  overflow: hidden;
+}
+
+.wave-line::before{
+  content: "~~~~~~~";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blue);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  animation: waveMove 2s linear infinite;
+}
+
+@keyframes waveMove{
+  from{
+    transform: translateY(-50%) translateX(0);
+  }
+  to{
+    transform: translateY(-50%) translateX(-18px);
+  }
+}
+
+.torrevieja-subtitle{
+  text-align: center;
+  font-size: 22px;
+  color: var(--blue-dark);
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+/* =========================
    LÁBLÉC
 ========================= */
 
@@ -405,7 +513,8 @@ p{
   }
 
   .intro-image img{
-    height: 420px;
+    max-height: 420px;
+    margin: 0 auto;
   }
 
   .unified-card-grid{
@@ -462,7 +571,7 @@ p{
   }
 
   .intro-image img{
-    height: 300px;
+    max-height: none;
   }
 
   .intro-text{
@@ -472,127 +581,4 @@ p{
   .pill{
     max-width: 290px;
   }
-}
-
-/* =========================
-   CÍM STÍLUS
-========================= */
-
-.section-kicker-title{
-  color: var(--blue-dark);
-  letter-spacing: 1.1px;
-  font-weight: 700;
-}
-
-/* =========================
-   ANIMÁLT HULLÁMOS CÍM
-========================= */
-
-.section-kicker-title{
-  color: var(--red);
-  letter-spacing: 1.1px;
-  font-weight: 700;
-}
-
-.wave-title{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  text-align: center;
-}
-
-.wave-text{
-  display: inline-block;
-}
-
-.wave-line{
-  position: relative;
-  width: 80px;
-  height: 14px;
-  flex: 0 0 80px;
-  overflow: hidden;
-}
-
-.wave-line::before{
-  content: "~~~~~~~";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--blue);
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -2px;
-  white-space: nowrap;
-  animation: waveMove 2s linear infinite;
-}
-
-@keyframes waveMove{
-  from{
-    transform: translateY(-50%) translateX(0);
-  }
-  to{
-    transform: translateY(-50%) translateX(-18px);
-  }
-}
-
-.intro-lead{
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--blue-dark);
-  margin-bottom: 10px;
-}
-
-.intro-link{
-  display: inline-block;
-  margin-top: 12px;
-  font-weight: 600;
-  color: var(--red);
-  text-decoration: none;
-}
-
-.intro-link:hover{
-  text-decoration: underline;
-}
-
-.torrevieja-subtitle{
-  text-align: center;
-  font-size: 22px;
-  color: var(--blue-dark);
-  margin-top: 6px;
-  margin-bottom: 24px;
-}
-
-
-.intro-text{
-  position: relative;
-  overflow: hidden; /* EZ A LÉNYEG */
-}
-
-.intro-text::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;          /* pontosabb mint width:100% */
-  height: 6px;
-  background: var(--red);
-}
-
-.intro-text{
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  border: 2px solid transparent;
-}
-
-.intro-text:hover{
-  transform: translateY(-5px);
-  border-color: var(--red);
-  box-shadow:
-    0 24px 54px rgba(18, 40, 92, 0.16),
-    0 0 24px rgba(45, 79, 255, 0.28);
-}
-
-.wave-title .wave-text{
-  color: var(--blue-dark);
 }
