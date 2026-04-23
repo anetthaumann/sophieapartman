@@ -592,3 +592,7 @@ p{
     0 24px 54px rgba(18, 40, 92, 0.16),
     0 0 24px rgba(45, 79, 255, 0.28);
 }
+
+.wave-title .wave-text{
+  color: var(--blue-dark);
+}
