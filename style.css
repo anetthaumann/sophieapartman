@@ -1506,3 +1506,42 @@ p{
   color: var(--white);
   box-shadow: 0 6px 16px rgba(30, 91, 140, 0.25);
 }
+
+/* =========================
+   APARTMAN CTA - SÁRGA CSÍK
+========================= */
+
+.apartman-cta-box{
+  max-width: 760px;
+  margin: 28px auto 0;
+  text-align: center;
+  background: rgba(255,255,255,0.82);
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.apartman-cta-box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+.apartman-cta-box--yellow::before{
+  background: var(--yellow);
+}
+
+.apartman-cta-box--yellow:hover{
+  transform: translateY(-5px);
+  border-color: var(--yellow);
+  box-shadow:
+    0 24px 54px rgba(18, 40, 92, 0.16),
+    0 0 24px rgba(230,177,31,0.24);
+}
