@@ -1,118 +1,134 @@
-ak</a>
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galéria – Sophie Apartman</title>
+
+  <link rel="icon" type="image/png" href="kepek/favicon.png?v=2">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header__row">
+
+    <a href="index.html" class="brand">
+      <span class="brand__mark">S</span>
+      <span class="brand__text">Sophie Apartman</span>
+    </a>
+
+    <button class="menu-toggle" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav">
+      <a href="apartman.html">Apartman</a>
+      <a href="elhelyezkedes.html">Elhelyezkedés</a>
+      <a href="galeria.html">Galéria</a>
       <a href="kapcsolat.html">Kapcsolat</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
-  <section class="service-strip">
-    <div class="container">
-      <p>Galéria • Sophie Apartman • Torrevieja</p>
-    </div>
-  </section>
-
+  <!-- CÍM -->
   <section class="section">
     <div class="container">
-      <h2 class="section-kicker-title wave-title">
-        <span class="wave-line" aria-hidden="true"></span>
+
+      <h2 class="wave-title">
+        <span class="wave-line"></span>
         <span class="wave-text">Galéria</span>
-        <span class="wave-line" aria-hidden="true"></span>
+        <span class="wave-line"></span>
       </h2>
 
       <p class="torrevieja-subtitle">
-        Válassz egy mappát a képek megtekintéséhez
+        Válassz egy mappát
       </p>
 
+      <!-- MAPPÁK -->
       <div class="gallery-folder-grid">
-        <button class="gallery-folder gallery-folder--red" type="button" data-target="apartman-gallery">
-          <span class="gallery-folder__title">Apartman</span>
-          <span class="gallery-folder__text">Belső terek és apartmanfotók</span>
+
+        <button class="gallery-folder gallery-folder--red" data-target="apartman">
+          Apartman
         </button>
 
-        <button class="gallery-folder gallery-folder--yellow" type="button" data-target="torrevieja-gallery">
-          <span class="gallery-folder__title">Torrevieja</span>
-          <span class="gallery-folder__text">Tengerpart, sétányok és városi hangulat</span>
+        <button class="gallery-folder gallery-folder--yellow" data-target="torrevieja">
+          Torrevieja
         </button>
+
       </div>
+
     </div>
   </section>
 
-  <section class="section gallery-panel" id="apartman-gallery" hidden>
+  <!-- APARTMAN -->
+  <section id="apartman" class="gallery-panel" hidden>
     <div class="container">
-      <h2 class="section-kicker-title wave-title">
-        <span class="wave-line" aria-hidden="true"></span>
-        <span class="wave-text">Apartman képek</span>
-        <span class="wave-line" aria-hidden="true"></span>
-      </h2>
 
       <p class="gallery-lead">
-        Kényelmes apartman: nappali kihúzható kanapéval, egy hálószoba franciaággyal, nagy terasz, mindennel felszerelt, modern konyha, fürdőszoba, étkező, prémium minőségű bútorok, igényes berendezés, maximális tisztaság, klíma, korlátlan internet, okos TV, napernyők, napozószékek, strandfelszerelések, babaágy, pótágy.
+        Kényelmes, modern, teljesen felszerelt apartman.
       </p>
 
       <div class="gallery-grid">
-        <div class="gallery-card"><img src="kepek/ap1.jpg" alt="Apartman kép 1" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap2.jpg" alt="Apartman kép 2" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap3.jpg" alt="Apartman kép 3" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap4.jpg" alt="Apartman kép 4" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap5.jpg" alt="Apartman kép 5" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap6.jpg" alt="Apartman kép 6" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap7.jpg" alt="Apartman kép 7" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap8.jpg" alt="Apartman kép 8" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap9.jpg" alt="Apartman kép 9" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap10.jpg" alt="Apartman kép 10" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap11.jpg" alt="Apartman kép 11" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/ap12.jpg" alt="Apartman kép 12" class="gallery-open"></div>
+
+        <div class="gallery-card"><img src="kepek/ap1.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap2.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap3.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap4.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap5.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap6.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap7.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap8.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap9.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap10.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap11.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/ap12.jpg" class="gallery-open"></div>
+
       </div>
+
     </div>
   </section>
 
-  <section class="section gallery-panel" id="torrevieja-gallery" hidden>
+  <!-- TORREVIEJA -->
+  <section id="torrevieja" class="gallery-panel" hidden>
     <div class="container">
-      <h2 class="section-kicker-title wave-title">
-        <span class="wave-line" aria-hidden="true"></span>
-        <span class="wave-text">Torrevieja képek</span>
-        <span class="wave-line" aria-hidden="true"></span>
-      </h2>
 
       <p class="gallery-lead">
-        A spanyol tengerpart egyik gyöngyszeme, Torrevieja a napsütés, a pálmafák és a mediterrán életérzés tökéletes találkozása. Apartmanunk a közkedvelt Playa de los Locos közelében található, ahol a homokos part, a kristálytiszta víz és a hangulatos sétány garantálja a kikapcsolódást. A környéken ízletes ételek, frissítő koktélok és nyugodt, mégis pezsgő nyaralási hangulat várja vendégeinket.
+        Torrevieja – napsütés, tengerpart, mediterrán hangulat.
       </p>
 
       <div class="gallery-grid">
-        <div class="gallery-card"><img src="kepek/tor1.jpg" alt="Torrevieja kép 1" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor2.jpg" alt="Torrevieja kép 2" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor3.jpg" alt="Torrevieja kép 3" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor4.jpg" alt="Torrevieja kép 4" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor5.jpg" alt="Torrevieja kép 5" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor6.jpg" alt="Torrevieja kép 6" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor7.jpg" alt="Torrevieja kép 7" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor8.jpg" alt="Torrevieja kép 8" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor9.jpg" alt="Torrevieja kép 9" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor10.jpg" alt="Torrevieja kép 10" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor11.jpg" alt="Torrevieja kép 11" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor12.jpg" alt="Torrevieja kép 12" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor13.jpg" alt="Torrevieja kép 13" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor14.jpg" alt="Torrevieja kép 14" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor15.jpg" alt="Torrevieja kép 15" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor16.jpg" alt="Torrevieja kép 16" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor17.jpg" alt="Torrevieja kép 17" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor18.jpg" alt="Torrevieja kép 18" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor19.jpg" alt="Torrevieja kép 19" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor20.jpg" alt="Torrevieja kép 20" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor21.jpg" alt="Torrevieja kép 21" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor22.jpg" alt="Torrevieja kép 22" class="gallery-open"></div>
-        <div class="gallery-card"><img src="kepek/tor23.jpg" alt="Torrevieja kép 23" class="gallery-open"></div>
+
+        <div class="gallery-card"><img src="kepek/tor1.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor2.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor3.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor4.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor5.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor6.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor7.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor8.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor9.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor10.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor11.jpg" class="gallery-open"></div>
+        <div class="gallery-card"><img src="kepek/tor12.jpg" class="gallery-open"></div>
+
       </div>
+
     </div>
   </section>
 
 </main>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox__close" id="lightboxClose" aria-label="Bezárás">×</button>
-  <img id="lightboxImg" class="lightbox__img" src="" alt="">
-</div>
 
 <footer class="footer">
   <div class="container footer__row">
@@ -122,5 +138,6 @@ ak</a>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
