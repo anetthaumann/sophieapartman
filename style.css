@@ -1350,3 +1350,74 @@ p{
   border-radius: 20px;
   box-shadow: var(--shadow);
 }
+
+/* =========================
+   KAPCSOLAT OLDAL
+========================= */
+
+.contact-box{
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 18px;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(30, 91, 140, 0.06);
+  transition: 0.2s ease;
+}
+
+.contact-item:hover{
+  transform: translateY(-3px);
+  background: rgba(30, 91, 140, 0.10);
+}
+
+.contact-icon{
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.contact-item a{
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.contact-item a:hover{
+  text-decoration: underline;
+}
+
+/* =========================
+   ÁRAK OLDAL
+========================= */
+
+.arak-box{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =========================
+   TRANSZFER OLDAL
+========================= */
+
+.transzfer-box{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.transzfer-price{
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 14px;
+}
