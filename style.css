@@ -3,6 +3,8 @@
   --white: #ffffff;
   --blue: #1e5b8c;
   --blue-dark: #143e61;
+  --sea: #2d8fbf;
+  --turquoise: #1fb5a9;
   --text: #213244;
   --muted: #5f6f80;
   --red: #c73a32;
@@ -198,7 +200,14 @@ p{
   font-size: 24px;
   font-weight: 700;
   color: var(--white);
-  background: linear-gradient(90deg, var(--red), var(--yellow), var(--red));
+  background: linear-gradient(
+    90deg,
+    var(--blue-dark),
+    var(--sea),
+    var(--turquoise),
+    var(--sea),
+    var(--blue-dark)
+  );
   box-shadow: var(--shadow);
 }
 
@@ -1437,4 +1446,99 @@ p{
 
 .card-link:hover{
   background: var(--blue-dark);
+}
+
+/* =========================
+   APARTMAN ALOLDAL
+========================= */
+
+.apartman-features-box{
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.92);
+  border: 2px solid transparent;
+  border-radius: 24px;
+  padding: 34px 30px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.apartman-features-box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--red);
+}
+
+.apartman-features-box:hover{
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow:
+    0 24px 54px rgba(18, 40, 92, 0.16),
+    0 0 24px rgba(45, 79, 255, 0.28);
+}
+
+.apartman-features-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 28px;
+}
+
+.apartman-features-list li{
+  position: relative;
+  padding-left: 26px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.apartman-features-list li::before{
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.apartman-cta-box{
+  max-width: 760px;
+  margin: 28px auto 0;
+  text-align: center;
+  background: rgba(255,255,255,0.82);
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+}
+
+.apartman-cta-box p{
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px){
+  .apartman-features-box{
+    padding: 24px 18px;
+  }
+
+  .apartman-features-list{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .apartman-features-list li{
+    font-size: 16px;
+  }
+
+  .apartman-cta-box{
+    padding: 20px 16px;
+  }
 }
