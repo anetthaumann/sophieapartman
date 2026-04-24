@@ -1655,11 +1655,11 @@ p{
 .brand{
   display: flex;
   align-items: center;
-  flex: 0 0 200px;
+  flex: 0 0 180px;
 }
 
 .brand__logo{
-  width: 200px;
+  width: 180px;
   height: auto;
   display: block;
 }
