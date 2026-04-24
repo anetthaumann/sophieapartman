@@ -1655,6 +1655,7 @@ p{
 .brand{
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .brand__logo{
