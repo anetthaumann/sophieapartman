@@ -1609,3 +1609,8 @@ p{
   border-radius: 20px;
   box-shadow: var(--shadow-strong);
 }
+
+.location-map img:hover{
+  transform: scale(1.01);
+  transition: 0.3s ease;
+}
