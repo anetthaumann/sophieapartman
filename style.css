@@ -1625,3 +1625,28 @@ p{
   width: auto;
   display: block;
 }
+
+.contact-box{
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--red);
+}
+
+.contact-box:hover{
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow:
+    0 24px 54px rgba(18, 40, 92, 0.16),
+    0 0 24px rgba(199,58,50,0.24);
+}
