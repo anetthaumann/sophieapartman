@@ -1545,3 +1545,28 @@ p{
     0 24px 54px rgba(18, 40, 92, 0.16),
     0 0 24px rgba(230,177,31,0.24);
 }
+
+.subpage-subtitle-section{
+  padding: 14px 0 0;
+}
+
+.subpage-subtitle-section .torrevieja-subtitle{
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px){
+  .wave-decor,
+  .section-kicker-title{
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.contact-item{
+  min-width: 0;
+}
+
+.contact-item a{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
