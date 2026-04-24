@@ -1659,7 +1659,11 @@ p{
 }
 
 .brand__logo{
-  height: 74px;
+  height: 70px;
   width: auto;
   display: block;
+}
+
+.header__row{
+  min-height: 90px;
 }
