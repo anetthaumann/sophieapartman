@@ -1655,15 +1655,19 @@ p{
 .brand{
   display: flex;
   align-items: center;
-  flex: 0 0 auto;
+  flex: 0 0 190px;
 }
 
 .brand__logo{
-  height: 70px;
-  width: auto;
+  width: 190px;
+  height: auto;
   display: block;
 }
 
 .header__row{
   min-height: 90px;
+}
+
+.nav{
+  flex: 1;
 }
