@@ -1570,3 +1570,26 @@ p{
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+.scroll-top{
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(18,54,87,0.28);
+  z-index: 2500;
+}
+
+.scroll-top:hover{
+  background: var(--blue-dark);
+  transform: translateY(-3px);
+}
