@@ -88,6 +88,20 @@ p{
   padding: 54px 0;
 }
 
+.section-kicker-title{
+  color: var(--blue-dark);
+  letter-spacing: 1.1px;
+  font-weight: 700;
+}
+
+.torrevieja-subtitle{
+  text-align: center;
+  font-size: 22px;
+  color: var(--blue-dark);
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
 /* =========================
    FEJLÉC
 ========================= */
@@ -107,16 +121,22 @@ p{
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  min-height: 78px;
+  min-height: 90px;
 }
 
 .brand{
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
   color: inherit;
-  flex: 0 0 auto;
+  flex: 0 0 180px;
+}
+
+.brand__logo{
+  width: 180px;
+  height: auto;
+  display: block;
 }
 
 .brand__mark{
@@ -145,6 +165,7 @@ p{
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .nav a{
@@ -160,6 +181,12 @@ p{
 .nav a:hover{
   background: var(--blue);
   color: var(--white);
+}
+
+.nav a.active{
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 6px 16px rgba(30, 91, 140, 0.25);
 }
 
 .menu-toggle{
@@ -237,7 +264,6 @@ p{
 
 .intro-text{
   background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(30, 91, 140, 0.10);
   border-radius: 24px;
   padding: 34px 30px;
   box-shadow: var(--shadow);
@@ -411,584 +437,12 @@ p{
 }
 
 /* =========================
-   CÍM STÍLUS (EGYSÉGES, KÉK)
-========================= */
-
-.section-kicker-title{
-  color: var(--blue-dark);
-  letter-spacing: 1.1px;
-  font-weight: 700;
-}
-
-/* =========================
-   ANIMÁLT HULLÁMOS CÍM
-========================= */
-
-
-.torrevieja-subtitle{
-  text-align: center;
-  font-size: 22px;
-  color: var(--blue-dark);
-  margin-top: 6px;
-  margin-bottom: 24px;
-}
-
-/* =========================
-   LÁBLÉC
-========================= */
-
-.footer{
-  background: #15304d;
-  color: rgba(255,255,255,0.88);
-  padding: 24px 0 32px;
-}
-
-.footer__row{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.footer__row p{
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-}
-
-.footer a{
-  color: #ffd27a;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.footer a:hover{
-  text-decoration: underline;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 1024px){
-  .intro-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .intro-image img{
-    max-height: 420px;
-    margin: 0 auto;
-  }
-
-  .unified-card-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   MOBIL
-========================= */
-
-@media (max-width: 768px){
-  h1{
-    font-size: 36px;
-  }
-
-  h2{
-    font-size: 28px;
-  }
-
-  .header__row{
-    min-height: 72px;
-    padding: 12px 0;
-    flex-wrap: wrap;
-  }
-
-  .menu-toggle{
-    display: inline-block;
-    margin-left: auto;
-  }
-
-  .nav{
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding-top: 10px;
-  }
-
-  .nav.open{
-    display: flex;
-  }
-
-  .nav a{
-    background: rgba(30, 91, 140, 0.08);
-    text-align: center;
-    border-radius: 12px;
-  }
-
-  .service-strip p{
-    font-size: 18px;
-    padding: 10px 14px;
-  }
-
-  .intro-image img{
-    max-height: none;
-  }
-
-  .intro-text{
-    padding: 24px 18px;
-  }
-
-  .pill{
-    max-width: 290px;
-  }
-}
-
-/* =========================
    GALÉRIA
 ========================= */
 
 .gallery-section{
   padding-top: 34px;
 }
-
-.gallery-lead{
-  max-width: 980px;
-  margin: 0 auto 28px;
-  text-align: center;
-  color: var(--text);
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.gallery-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  align-items: start;
-}
-
-.gallery-card{
-  background: var(--white);
-  border-radius: 18px;
-  padding: 14px;
-  box-shadow: var(--shadow);
-  border: 2px solid transparent;
-  position: relative;
-  transition: 0.22s ease;
-  overflow: hidden;
-
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery-card::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-}
-
-/* ASZTALI GÉPEN: piros-sárga-piros */
-.gallery-card:nth-child(3n+1)::before,
-.gallery-card:nth-child(3n+3)::before{
-  background: var(--red);
-}
-
-.gallery-card:nth-child(3n+2)::before{
-  background: var(--yellow);
-}
-
-.gallery-card:nth-child(3n+1):hover,
-.gallery-card:nth-child(3n+3):hover{
-  transform: translateY(-4px);
-  border-color: var(--red);
-  box-shadow:
-    0 22px 48px rgba(18, 54, 87, 0.12),
-    0 0 0 1px rgba(199,58,50,0.18);
-}
-
-.gallery-card:nth-child(3n+2):hover{
-  transform: translateY(-4px);
-  border-color: var(--yellow);
-  box-shadow:
-    0 22px 48px rgba(18, 54, 87, 0.12),
-    0 0 0 1px rgba(230,177,31,0.22);
-}
-
-.gallery-card img{
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: var(--white);
-}
-
-.gallery-open{
-  cursor: pointer;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 1024px){
-  .gallery-grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-card{
-    min-height: 300px;
-  }
-
-  .gallery-card img{
-    height: 260px;
-  }
-}
-
-/* =========================
-   MOBIL
-========================= */
-
-@media (max-width: 768px){
-  .gallery-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-lead{
-    font-size: 16px;
-  }
-
-  .gallery-card{
-    min-height: 300px;
-  }
-
-  .gallery-card img{
-    height: 260px;
-  }
-
-  /* MOBILON: piros-sárga-piros-sárga váltakozás */
-  .gallery-card:nth-child(odd)::before{
-    background: var(--red);
-  }
-
-  .gallery-card:nth-child(even)::before{
-    background: var(--yellow);
-  }
-
-  .gallery-card:nth-child(odd):hover{
-    border-color: var(--red);
-    box-shadow:
-      0 22px 48px rgba(18, 54, 87, 0.12),
-      0 0 0 1px rgba(199,58,50,0.18);
-  }
-
-  .gallery-card:nth-child(even):hover{
-    border-color: var(--yellow);
-    box-shadow:
-      0 22px 48px rgba(18, 54, 87, 0.12),
-      0 0 0 1px rgba(230,177,31,0.22);
-  }
-}
-
-/* =========================
-   LIGHTBOX
-========================= */
-
-.gallery-open{
-  cursor: pointer;
-}
-
-.lightbox{
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 20, 35, 0.88);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  z-index: 3000;
-}
-
-.lightbox.open{
-  display: flex;
-}
-
-.lightbox__img{
-  max-width: min(1100px, 92vw);
-  max-height: 88vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
-  background: #fff;
-}
-
-.lightbox__close{
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  width: 46px;
-  height: 46px;
-  border: none;
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--blue-dark);
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
-/* =========================
-   GALÉRIA MAPPÁK
-========================= */
-
-.gallery-folder-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 360px));
-  justify-content: center;
-  gap: 26px;
-  margin-top: 10px;
-}
-
-.gallery-folder{
-  background: var(--white);
-  border: 2px solid transparent;
-  border-radius: 20px;
-  padding: 26px 22px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  transition: 0.22s ease;
-  overflow: hidden;
-}
-
-.gallery-folder::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-}
-
-.gallery-folder--red::before{
-  background: var(--red);
-}
-
-.gallery-folder--yellow::before{
-  background: var(--yellow);
-}
-
-.gallery-folder--red:hover{
-  transform: translateY(-4px);
-  border-color: var(--red);
-  box-shadow:
-    0 22px 48px rgba(18, 54, 87, 0.12),
-    0 0 0 1px rgba(199,58,50,0.18);
-}
-
-.gallery-folder--yellow:hover{
-  transform: translateY(-4px);
-  border-color: var(--yellow);
-  box-shadow:
-    0 22px 48px rgba(18, 54, 87, 0.12),
-    0 0 0 1px rgba(230,177,31,0.22);
-}
-
-.gallery-folder__title{
-  display: block;
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  color: var(--blue-dark);
-  margin-bottom: 6px;
-}
-
-.gallery-folder__text{
-  display: block;
-  color: var(--text);
-  font-size: 15px;
-}
-
-/* =========================
-   GALÉRIA BLOKKOK
-========================= */
-
-.gallery-panel{
-  padding-top: 18px;
-}
-
-.gallery-lead{
-  max-width: 980px;
-  margin: 0 auto 28px;
-  text-align: center;
-  color: var(--text);
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-/* =========================
-   GALÉRIA RÁCS
-========================= */
-
-.gallery-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  align-items: start;
-}
-
-.gallery-card{
-  background: var(--white);
-  border-radius: 18px;
-  padding: 12px;
-  box-shadow: var(--shadow);
-  border: 2px solid transparent;
-  position: relative;
-  transition: 0.22s ease;
-  overflow: hidden;
-}
-
-.gallery-card::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-}
-
-.gallery-card:nth-child(3n+1)::before,
-.gallery-card:nth-child(3n+3)::before{
-  background: var(--red);
-}
-
-.gallery-card:nth-child(3n+2)::before{
-  background: var(--yellow);
-}
-
-.gallery-card:nth-child(3n+1):hover,
-.gallery-card:nth-child(3n+3):hover{
-  transform: translateY(-4px);
-  border-color: var(--red);
-  box-shadow:
-    0 22px 48px rgba(18, 54, 87, 0.12),
-    0 0 0 1px rgba(199,58,50,0.18);
-}
-
-.gallery-card:nth-child(3n+2):hover{
-  transform: translateY(-4px);
-  border-color: var(--yellow);
-  box-shadow:
-    0 22px 48px rgba(18, 54, 87, 0.12),
-    0 0 0 1px rgba(230,177,31,0.22);
-}
-
-.gallery-card img{
-  width: 100%;
-  max-height: 260px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  background: var(--white);
-}
-
-.gallery-open{
-  cursor: pointer;
-}
-
-/* =========================
-   LIGHTBOX
-========================= */
-
-.lightbox{
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 20, 35, 0.88);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  z-index: 3000;
-}
-
-.lightbox.open{
-  display: flex;
-}
-
-.lightbox__img{
-  max-width: min(1100px, 92vw);
-  max-height: 88vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
-  background: #fff;
-}
-
-.lightbox__close{
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  width: 46px;
-  height: 46px;
-  border: none;
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--blue-dark);
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
-/* =========================
-   TABLET / MOBIL
-========================= */
-
-@media (max-width: 1024px){
-  .gallery-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .gallery-folder-grid{
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 768px){
-  .gallery-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-lead{
-    font-size: 16px;
-  }
-
-  .gallery-card img{
-    max-height: 320px;
-  }
-}
-
-/* =========================
-   GALÉRIA MAPPÁK
-========================= */
 
 .gallery-folder-grid{
   display: grid;
@@ -1059,10 +513,6 @@ p{
   font-weight: 500;
 }
 
-/* =========================
-   GALÉRIA BLOKKOK
-========================= */
-
 .gallery-panel{
   padding-top: 18px;
 }
@@ -1107,7 +557,6 @@ p{
   height: 6px;
 }
 
-/* ASZTALI: piros-sárga-piros */
 .gallery-card:nth-child(3n+1)::before,
 .gallery-card:nth-child(3n+3)::before{
   background: var(--red);
@@ -1193,76 +642,6 @@ p{
 }
 
 /* =========================
-   TABLET / MOBIL
-========================= */
-
-@media (max-width: 1024px){
-  .gallery-folder-grid{
-    grid-template-columns: 1fr;
-    max-width: 460px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .gallery-grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-card{
-    min-height: 300px;
-  }
-
-  .gallery-card img{
-    height: 260px;
-  }
-}
-
-@media (max-width: 768px){
-  .gallery-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-lead{
-    font-size: 16px;
-  }
-
-  .gallery-folder__title{
-    font-size: 30px;
-  }
-
-  .gallery-card{
-    min-height: 300px;
-  }
-
-  .gallery-card img{
-    height: 260px;
-  }
-
-  /* MOBIL: piros-sárga-piros-sárga */
-  .gallery-card:nth-child(odd)::before{
-    background: var(--red);
-  }
-
-  .gallery-card:nth-child(even)::before{
-    background: var(--yellow);
-  }
-
-  .gallery-card:nth-child(odd):hover{
-    border-color: var(--red);
-    box-shadow:
-      0 22px 48px rgba(18, 54, 87, 0.12),
-      0 0 0 1px rgba(199,58,50,0.18);
-  }
-
-  .gallery-card:nth-child(even):hover{
-    border-color: var(--yellow);
-    box-shadow:
-      0 22px 48px rgba(18, 54, 87, 0.12),
-      0 0 0 1px rgba(230,177,31,0.22);
-  }
-}
-
-/* =========================
    APARTMAN ALOLDAL
 ========================= */
 
@@ -1301,10 +680,6 @@ p{
   margin-top: 26px;
 }
 
-/* =========================
-   APARTMAN TÉRKÉP
-========================= */
-
 .apartman-map{
   margin: 28px auto 10px;
   max-width: 860px;
@@ -1316,98 +691,6 @@ p{
   border-radius: 20px;
   box-shadow: var(--shadow);
 }
-
-/* =========================
-   KAPCSOLAT OLDAL
-========================= */
-
-.contact-box{
-  max-width: 600px;
-  margin: 0 auto;
-  background: var(--white);
-  border-radius: 24px;
-  padding: 30px 24px;
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 18px;
-}
-
-.contact-item{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
-  border-radius: 14px;
-  background: rgba(30, 91, 140, 0.06);
-  transition: 0.2s ease;
-}
-
-.contact-item:hover{
-  transform: translateY(-3px);
-  background: rgba(30, 91, 140, 0.10);
-}
-
-.contact-icon{
-  font-size: 20px;
-  color: var(--blue);
-}
-
-.contact-item a{
-  text-decoration: none;
-  color: var(--blue-dark);
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.contact-item a:hover{
-  text-decoration: underline;
-}
-
-/* =========================
-   ÁRAK OLDAL
-========================= */
-
-.arak-box{
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* =========================
-   TRANSZFER OLDAL
-========================= */
-
-.transzfer-box{
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.transzfer-price{
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  margin-bottom: 14px;
-}
-
-.card-link{
-  display: inline-block;
-  margin-top: 14px;
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--white);
-  background: var(--blue);
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.card-link:hover{
-  background: var(--blue-dark);
-}
-
-/* =========================
-   APARTMAN ALOLDAL
-========================= */
 
 .apartman-features-box{
   max-width: 980px;
@@ -1475,54 +758,14 @@ p{
   border-radius: 20px;
   padding: 24px 20px;
   box-shadow: var(--shadow);
-}
-
-.apartman-cta-box p{
-  margin-bottom: 12px;
-}
-
-@media (max-width: 768px){
-  .apartman-features-box{
-    padding: 24px 18px;
-  }
-
-  .apartman-features-list{
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .apartman-features-list li{
-    font-size: 16px;
-  }
-
-  .apartman-cta-box{
-    padding: 20px 16px;
-  }
-}
-
-
-.nav a.active{
-  background: var(--blue);
-  color: var(--white);
-  box-shadow: 0 6px 16px rgba(30, 91, 140, 0.25);
-}
-
-/* =========================
-   APARTMAN CTA - SÁRGA CSÍK
-========================= */
-
-.apartman-cta-box{
-  max-width: 760px;
-  margin: 28px auto 0;
-  text-align: center;
-  background: rgba(255,255,255,0.82);
-  border-radius: 20px;
-  padding: 24px 20px;
-  box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
   border: 2px solid transparent;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.apartman-cta-box p{
+  margin-bottom: 12px;
 }
 
 .apartman-cta-box::before{
@@ -1546,6 +789,127 @@ p{
     0 0 24px rgba(230,177,31,0.24);
 }
 
+/* =========================
+   KAPCSOLAT OLDAL
+========================= */
+
+.contact-box{
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--red);
+}
+
+.contact-box:hover{
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow:
+    0 24px 54px rgba(18, 40, 92, 0.16),
+    0 0 24px rgba(199,58,50,0.24);
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(30, 91, 140, 0.06);
+  transition: 0.2s ease;
+  min-width: 0;
+}
+
+.contact-item:hover{
+  transform: translateY(-3px);
+  background: rgba(30, 91, 140, 0.10);
+}
+
+.contact-icon{
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.contact-item a{
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-item a:hover{
+  text-decoration: underline;
+}
+
+/* =========================
+   ÁRAK OLDAL
+========================= */
+
+.arak-box{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =========================
+   TRANSZFER OLDAL
+========================= */
+
+.transzfer-box{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.transzfer-price{
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 14px;
+}
+
+/* =========================
+   GOMBOK
+========================= */
+
+.card-link{
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.card-link:hover{
+  background: var(--blue-dark);
+}
+
+/* =========================
+   ALOLDAL ALCÍM
+========================= */
+
 .subpage-subtitle-section{
   padding: 14px 0 0;
 }
@@ -1554,22 +918,9 @@ p{
   margin-bottom: 0;
 }
 
-@media (max-width: 768px){
-  .wave-decor,
-  .section-kicker-title{
-    font-size: 24px;
-    line-height: 1.25;
-  }
-}
-
-.contact-item{
-  min-width: 0;
-}
-
-.contact-item a{
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
+/* =========================
+   SCROLL TOP
+========================= */
 
 .scroll-top{
   position: fixed;
@@ -1615,59 +966,210 @@ p{
   transition: 0.3s ease;
 }
 
-.brand{
+/* =========================
+   LÁBLÉC
+========================= */
+
+.footer{
+  background: #15304d;
+  color: rgba(255,255,255,0.88);
+  padding: 24px 0 32px;
+}
+
+.footer__row{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer__row p{
+  margin: 0;
+  display: inline-flex;
   align-items: center;
 }
 
-.brand__logo{
-  height: 48px;
-  width: auto;
-  display: block;
-}
-
-.contact-box{
-  position: relative;
-  overflow: hidden;
-  border: 2px solid transparent;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.contact-box::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: var(--red);
-}
-
-.contact-box:hover{
-  transform: translateY(-5px);
-  border-color: var(--red);
-  box-shadow:
-    0 24px 54px rgba(18, 40, 92, 0.16),
-    0 0 24px rgba(199,58,50,0.24);
-}
-
-/* LOGÓ A FEJLÉCBEN */
-.brand{
-  display: flex;
+.footer a{
+  color: #ffd27a;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
-  flex: 0 0 180px;
 }
 
-.brand__logo{
-  width: 180px;
-  height: auto;
-  display: block;
+.footer a:hover{
+  text-decoration: underline;
 }
 
-.header__row{
-  min-height: 90px;
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px){
+  .intro-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image img{
+    max-height: 420px;
+    margin: 0 auto;
+  }
+
+  .unified-card-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-folder-grid{
+    grid-template-columns: 1fr;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-card{
+    min-height: 300px;
+  }
+
+  .gallery-card img{
+    height: 260px;
+  }
 }
 
-.nav{
-  flex: 1;
+/* =========================
+   MOBIL
+========================= */
+
+@media (max-width: 768px){
+  h1{
+    font-size: 36px;
+  }
+
+  h2{
+    font-size: 28px;
+  }
+
+  .header__row{
+    min-height: 72px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+  }
+
+  .brand{
+    flex: 0 0 130px;
+  }
+
+  .brand__logo{
+    width: 130px;
+  }
+
+  .menu-toggle{
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .nav{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .nav.open{
+    display: flex;
+  }
+
+  .nav a{
+    background: rgba(30, 91, 140, 0.08);
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .service-strip p{
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+
+  .intro-image img{
+    max-height: none;
+  }
+
+  .intro-text{
+    padding: 24px 18px;
+  }
+
+  .pill{
+    max-width: 290px;
+  }
+
+  .wave-decor,
+  .section-kicker-title{
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .gallery-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-lead{
+    font-size: 16px;
+  }
+
+  .gallery-folder__title{
+    font-size: 30px;
+  }
+
+  .gallery-card{
+    min-height: 300px;
+  }
+
+  .gallery-card img{
+    height: 260px;
+  }
+
+  .gallery-card:nth-child(odd)::before{
+    background: var(--red);
+  }
+
+  .gallery-card:nth-child(even)::before{
+    background: var(--yellow);
+  }
+
+  .gallery-card:nth-child(odd):hover{
+    border-color: var(--red);
+    box-shadow:
+      0 22px 48px rgba(18, 54, 87, 0.12),
+      0 0 0 1px rgba(199,58,50,0.18);
+  }
+
+  .gallery-card:nth-child(even):hover{
+    border-color: var(--yellow);
+    box-shadow:
+      0 22px 48px rgba(18, 54, 87, 0.12),
+      0 0 0 1px rgba(230,177,31,0.22);
+  }
+
+  .apartman-features-box{
+    padding: 24px 18px;
+  }
+
+  .apartman-features-list{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .apartman-features-list li{
+    font-size: 16px;
+  }
+
+  .apartman-cta-box{
+    padding: 20px 16px;
+  }
 }
