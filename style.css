@@ -134,7 +134,7 @@ p{
 }
 
 .brand__logo{
-  width: 180px;
+  width: 130px;
   height: auto;
   display: block;
 }
@@ -1054,7 +1054,7 @@ p{
   }
 
   .header__row{
-    min-height: 72px;
+    min-height: 70px;
     padding: 12px 0;
     flex-wrap: wrap;
   }
