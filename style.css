@@ -1248,7 +1248,7 @@ p{
   left: 0;
   right: 0;
   height: 6px;
-  background: var(--blue); /* mivel már kék lett a design */
+  background: var(--red); /* mivel már kék lett a design */
 }
 
 .intro-image-card:hover{
