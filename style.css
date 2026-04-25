@@ -1,5 +1,5 @@
 :root{
-  --bg: #eaf4ff;
+  --bg: #d8edf3;
   --white: #ffffff;
   --blue: #1e5b8c;
   --blue-dark: #143e61;
@@ -7,8 +7,8 @@
   --turquoise: #1fb5a9;
   --text: #213244;
   --muted: #5f6f80;
-  --red: #c73a32;
-  --yellow: #e6b11f;
+  --red: #1e5b8c;
+  --yellow: #2d8fbf;
   --line: rgba(30, 91, 140, 0.12);
   --shadow: 0 16px 36px rgba(18, 54, 87, 0.10);
   --shadow-strong: 0 22px 48px rgba(18, 54, 87, 0.14);
