@@ -1297,7 +1297,7 @@ p{
 /* Ryanair */
 .airline-card.ryanair{
   background: linear-gradient(135deg, #003087, #ffcc00);
-  color: #002244;
+  color: #ffffff;
 }
 
 .airline-card.ryanair:hover{
