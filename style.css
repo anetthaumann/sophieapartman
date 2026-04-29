@@ -1322,3 +1322,13 @@ p{
     grid-template-columns: 1fr;
   }
 }
+
+.section-kicker-title{
+  font-size: 34px;
+}
+
+@media (max-width: 768px){
+  .section-kicker-title{
+    font-size: 26px;
+  }
+}
